@@ -1,0 +1,1561 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Mexicali666</title>
+<style>
+    body {
+        background-color: #000;
+        color: white;
+        font-family: Arial, sans-serif;
+        padding: 10px;
+        margin: 0;
+        overflow-x: hidden;
+    }
+    h1 {
+        text-align: center;
+        color: red;
+        font-size: 32px;
+        margin-bottom: 10px;
+    }
+    .filtro {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 15px;
+    }
+    input, button {
+        padding: 10px;
+        font-size: 16px;
+        margin: 5px;
+        width: 90%;
+        max-width: 400px;
+    }
+    .persona {
+        margin-bottom: 20px;
+    }
+    .persona img {
+        width: 100%;
+        max-width: 400px;
+        display: block;
+        margin: auto;
+        border-radius: 10px;
+        pointer-events: none;
+        user-select: none;
+    }
+    .nombre {
+        text-align: center;
+        margin-top: 5px;
+        color: white;
+        font-weight: bold;
+    }
+</style>
+</head>
+<body oncontextmenu="return false;" ondragstart="return false;" onmousedown="return false;">
+    <h1>Mexicali<span style="color:white;">666</span></h1>
+    <div class="filtro">
+        <input type="text" id="buscador" placeholder="Buscar nombre..." onkeyup="filtrar()">
+        <button onclick="ordenar('nombre')">Ordenar A-Z</button>
+        <button onclick="ordenar('fecha')">Ordenar por Fecha</button>
+    </div>
+    <div id="contenedor">
+
+        <div class="persona" data-nombre="a daniela arambula" data-fecha="03/04/2024">
+            <img src="rostros_detectados/A Daniela Arambula_274532010_638148317411511_3564996768067116791_n.jpg" alt="A Daniela Arambula">
+            <div class="nombre">A Daniela Arambula [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="abby montes" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Abby Montes_273704894_4820131831439126_1012783990375474122_n.jpg" alt="Abby Montes">
+            <div class="nombre">Abby Montes [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ac miosotis" data-fecha="01/05/2024">
+            <img src="rostros_detectados/AC Miosotis_309909530_1485890831889719_4515828835548712318_n.jpg" alt="AC Miosotis">
+            <div class="nombre">AC Miosotis [01/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ada reyes" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ada Reyes_284215345_420315703115434_8996146821276751995_n.jpg" alt="Ada Reyes">
+            <div class="nombre">Ada Reyes [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="adriana garcia" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Adriana Garcia_287418416_265364702459881_4021038514035290277_n.jpg" alt="Adriana Garcia">
+            <div class="nombre">Adriana Garcia [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="adriana garcia gamez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Adriana Garcia Gamez_43505821_1003625159841861_3166272155721662464_n.jpg" alt="Adriana Garcia Gamez">
+            <div class="nombre">Adriana Garcia Gamez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="adriana martinez medina" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Adriana Martinez Medina_141474825_1880010892154405_8921612881919090792_n.jpg" alt="Adriana Martinez Medina">
+            <div class="nombre">Adriana Martinez Medina [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aguirre espinoza laurent" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Aguirre Espinoza Laurent_264469707_2928442647466580_3040344536761495643_n.jpg" alt="Aguirre Espinoza Laurent">
+            <div class="nombre">Aguirre Espinoza Laurent [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ainek cordero" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ainek Cordero_301718819_626182022219261_3273488882005160867_n.jpg" alt="Ainek Cordero">
+            <div class="nombre">Ainek Cordero [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra bennet" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Bennet_13689432_10206750609266031_1150432978_n.jpg" alt="Alejandra Bennet">
+            <div class="nombre">Alejandra Bennet [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra macias" data-fecha="04/06/2024">
+            <img src="rostros_detectados/Alejandra Macias_442464393_7576025552484376_474335253152606600_n.mp4_frame150.jpg" alt="Alejandra Macias">
+            <div class="nombre">Alejandra Macias [04/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra meza" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Meza_21122810_1610393225668830_1376001785_o.jpg" alt="Alejandra Meza">
+            <div class="nombre">Alejandra Meza [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra morales gonzalez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Morales Gonzalez_284322000_450931557108907_662250452618082156_n.jpg" alt="Alejandra Morales Gonzalez">
+            <div class="nombre">Alejandra Morales Gonzalez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra reynoso" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Reynoso_received_10153441198811357.jpeg" alt="Alejandra Reynoso">
+            <div class="nombre">Alejandra Reynoso [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra sanchez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Sanchez_93691645_533129734293240_8877817926204260352_n.jpg" alt="Alejandra Sanchez">
+            <div class="nombre">Alejandra Sanchez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alejandra soto" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alejandra Soto_105427187_265298128067936_4714182007089790583_n.jpg" alt="Alejandra Soto">
+            <div class="nombre">Alejandra Soto [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alessia vera" data-fecha="13/07/2024">
+            <img src="rostros_detectados/Alessia Vera_331656580_6047985755250384_7471669201807349616_n.mp4_frame300.jpg" alt="Alessia Vera">
+            <div class="nombre">Alessia Vera [13/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alexa eg" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alexa EG_received_1056339564945235.jpeg" alt="Alexa EG">
+            <div class="nombre">Alexa EG [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alexandra gonzález" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alexandra Gonzalez_125198200_1050591212055072_5042376197354283792_n.jpg" alt="Alexandra González">
+            <div class="nombre">Alexandra González [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alitzel adriano" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Alitzel Adriano_279448059_1057118531879753_4534673051525325331_n.jpg" alt="Alitzel Adriano">
+            <div class="nombre">Alitzel Adriano [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="alos paulina beeson" data-fecha="20/04/2024">
+            <img src="rostros_detectados/Alos Paulina Beeson_30653314_1816097835087519_5497162812910206976_n.png" alt="Alos Paulina Beeson">
+            <div class="nombre">Alos Paulina Beeson [20/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="amy montecillos" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Amy Montecillos_received_461520051709521.jpeg" alt="Amy Montecillos">
+            <div class="nombre">Amy Montecillos [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana carina" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Carina_78664399_2480142285639722_4969783357727571968_n.jpg" alt="Ana Carina">
+            <div class="nombre">Ana Carina [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana cocolan" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Cocolan_299118624_317458230548660_4054967022667693475_n.jpg" alt="Ana Cocolan">
+            <div class="nombre">Ana Cocolan [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana figueroa" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Ana Figueroa_9efbb0748b5367d4f7c06339d0b825a1768d96127584386c7f036c022bbbade9.mp4_frame0.jpg" alt="Ana Figueroa">
+            <div class="nombre">Ana Figueroa [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana laura rizo ortega" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Ana Laura Rizo Ortega_SmartSelect_20201202-135137_Facebook.jpg" alt="Ana Laura Rizo Ortega">
+            <div class="nombre">Ana Laura Rizo Ortega [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana lizeth gonzález" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Lizeth Gonzalez_281342420_1191852581601863_2580938235500893037_n.jpg" alt="Ana Lizeth González">
+            <div class="nombre">Ana Lizeth González [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana mejia" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Mejia_246592509_405842991053632_5750966025643996830_n.jpg" alt="Ana Mejia">
+            <div class="nombre">Ana Mejia [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana montijo" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Montijo_273236025_1265453173946778_4164486666646215820_n.jpg" alt="Ana Montijo">
+            <div class="nombre">Ana Montijo [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ana ochoa" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ana Ochoa_247335706_609091690104915_304891839388035295_n.jpg" alt="Ana Ochoa">
+            <div class="nombre">Ana Ochoa [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anabell salas" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Anabell Salas_received_1865869610343933.jpeg" alt="Anabell Salas">
+            <div class="nombre">Anabell Salas [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anahi gil medrano" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Anahi Gil Medrano_170026900_160135475988301_8591263978257333038_n.png" alt="Anahi Gil Medrano">
+            <div class="nombre">Anahi Gil Medrano [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="andrea navarrete" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Andrea Navarrete_13563332_577316912450612_1454855565_n.jpg" alt="Andrea Navarrete">
+            <div class="nombre">Andrea Navarrete [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aneth gonzalez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Aneth Gonzalez_31899083_1301831859961843_878854916985061376_n.jpg" alt="Aneth Gonzalez">
+            <div class="nombre">Aneth Gonzalez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="angelez garcia rico" data-fecha="25/07/2024">
+            <img src="rostros_detectados/Angelez Garcia Rico_photo_1_2024-07-25_08-41-00.jpg" alt="Angelez Garcia Rico">
+            <div class="nombre">Angelez Garcia Rico [25/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="angelica duarte" data-fecha="14/04/2024">
+            <img src="rostros_detectados/Angelica Duarte_336909999_606339951094988_3462533485539385116_n.jpg" alt="Angelica Duarte">
+            <div class="nombre">Angelica Duarte [14/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="angelica medel" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Angelica Medel_108590621_613826305931980_7317801522560028550_n.jpg" alt="Angelica Medel">
+            <div class="nombre">Angelica Medel [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="angie villa" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Angie Villa_153086555_426146941983241_2783301752158928390_n.jpg" alt="Angie Villa">
+            <div class="nombre">Angie Villa [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anna karen méndez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Anna Karen Mendez_42160677_336341583605899_4091722545835802624_n.jpg" alt="Anna Karen Méndez">
+            <div class="nombre">Anna Karen Méndez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anna rl" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Anna RL_57387365_412412559557371_3882839487159468032_n.jpg" alt="Anna RL">
+            <div class="nombre">Anna RL [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="annel saavedra" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Annel Saavedra_1c420aa4-6860-408d-9fe8-f1a8a2222c5f.jpg" alt="Annel Saavedra">
+            <div class="nombre">Annel Saavedra [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="annel sáenz" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Annel Saenz_143486898_409391173652263_7788975486666056195_n.jpg" alt="Annel Sáenz">
+            <div class="nombre">Annel Sáenz [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="annie sanchez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Annie Sanchez_242372846_882942979015778_5181495560977775131_n.jpg" alt="Annie Sanchez">
+            <div class="nombre">Annie Sanchez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aracely hernandez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Aracely Hernandez_IMG_6013.MOV_frame0.jpg" alt="Aracely Hernandez">
+            <div class="nombre">Aracely Hernandez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aracely urias" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Aracely Urias_265803386_1160197197844901_4579925999037827757_n.jpg" alt="Aracely Urias">
+            <div class="nombre">Aracely Urias [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="arantza murrieta" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Arantza Murrieta_video-1620443468.mp4_frame0.jpg" alt="Arantza Murrieta">
+            <div class="nombre">Arantza Murrieta [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aranza piiaggeth lpz" data-fecha="30/07/2024">
+            <img src="rostros_detectados/Aranza Piiaggeth Lpz_385538825_247234154710408_304599833327431830_n.jpg" alt="Aranza Piiaggeth Lpz">
+            <div class="nombre">Aranza Piiaggeth Lpz [30/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ari zajac" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ari Zajac_248867165_465013611517024_4646179976995556848_n.jpg" alt="Ari Zajac">
+            <div class="nombre">Ari Zajac [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ariana roque" data-fecha="17/04/2024">
+            <img src="rostros_detectados/Ariana Roque_279235394_370077088470022_2571554379671148623_n.jpg" alt="Ariana Roque">
+            <div class="nombre">Ariana Roque [17/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="arianna luna" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Arianna Luna_106236381_645094156088499_7591343444404048238_n.jpg" alt="Arianna Luna">
+            <div class="nombre">Arianna Luna [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="arleth parra" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Arleth Parra_received_123309409677175.jpeg" alt="Arleth Parra">
+            <div class="nombre">Arleth Parra [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ary morena garcia" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Ary Morena Garcia_69360017_669288983562007_5282740577861894144_n.jpg" alt="Ary Morena Garcia">
+            <div class="nombre">Ary Morena Garcia [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aty kwyz" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Aty Kwyz_117108296_395373711438252_1838661948088462777_n.jpg" alt="Aty Kwyz">
+            <div class="nombre">Aty Kwyz [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aurora bustamante" data-fecha="23/04/2024">
+            <img src="rostros_detectados/Aurora Bustamante_363086144_3462369297414010_7028694374599103046_n.jpg" alt="Aurora Bustamante">
+            <div class="nombre">Aurora Bustamante [23/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="aylin fernanda zuñiga amador" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Aylin Fernanda Zuniga Amador_120963679_1042594639515628_1796604592670948365_n.jpg" alt="Aylin Fernanda Zuñiga Amador">
+            <div class="nombre">Aylin Fernanda Zuñiga Amador [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="az aide" data-fecha="19/06/2024">
+            <img src="rostros_detectados/Az Aide_IMG_20240618_144434_468.jpg" alt="Az Aide">
+            <div class="nombre">Az Aide [19/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="azucena rubio" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Azucena Rubio_82f4611d-e857-4b8f-a837-67ebbd4ad00f.jpeg" alt="Azucena Rubio">
+            <div class="nombre">Azucena Rubio [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="belen zepeda garcia" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Belen Zepeda Garcia_352338909_1965990103753424_9084353280721375804_n.jpg" alt="Belen Zepeda Garcia">
+            <div class="nombre">Belen Zepeda Garcia [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="bere cárdenas" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Bere Cardenas_18553910_337148730051485_790942872_o.jpg" alt="Bere Cárdenas">
+            <div class="nombre">Bere Cárdenas [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="berenice manriquez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Berenice Manriquez_14536663_868300119971486_721802320_o.jpg" alt="Berenice Manriquez">
+            <div class="nombre">Berenice Manriquez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="brenda piceno" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Brenda Piceno_36063194_1430440790390547_5332723152394911744_n.jpg" alt="Brenda Piceno">
+            <div class="nombre">Brenda Piceno [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="briseira peña" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Briseira Pena_received_1061995654576628.jpeg" alt="Briseira Peña">
+            <div class="nombre">Briseira Peña [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="britany gr" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Britany GR_video-1640069499.mp4_frame0.jpg" alt="Britany GR">
+            <div class="nombre">Britany GR [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="camila callaú" data-fecha="30/07/2024">
+            <img src="rostros_detectados/Camila Callau_210580654_1838852339607665_1784110306605289366_n.jpg" alt="Camila Callaú">
+            <div class="nombre">Camila Callaú [30/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carmen villagrana" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Carmen Villagrana_IMG_20200920_203239_444.jpg" alt="Carmen Villagrana">
+            <div class="nombre">Carmen Villagrana [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="caro guzman" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Caro Guzman_117598944_3484336924918769_3336122997278503919_n.jpg" alt="Caro Guzman">
+            <div class="nombre">Caro Guzman [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carolina escobar" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Carolina Escobar_IMG_20230902_145322_503.jpg" alt="Carolina Escobar">
+            <div class="nombre">Carolina Escobar [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carolina perez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Carolina Perez_382639920_366368712380950_3645350319715591400_n.jpg" alt="Carolina Perez">
+            <div class="nombre">Carolina Perez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carolina sanchez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Carolina Sanchez_182931193_495322078492571_5991482828933539708_n.jpg" alt="Carolina Sanchez">
+            <div class="nombre">Carolina Sanchez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carolina zb" data-fecha="25/04/2024">
+            <img src="rostros_detectados/Carolina ZB_120498547_759861381532211_1608942547479276308_n.jpg" alt="Carolina ZB">
+            <div class="nombre">Carolina ZB [25/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="carranza de martinez angiie" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Carranza De Martinez Angiie_117728458_1061981967550127_8057832655635624845_n.jpg" alt="Carranza De Martinez Angiie">
+            <div class="nombre">Carranza De Martinez Angiie [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cindy aguilera" data-fecha="21/04/2024">
+            <img src="rostros_detectados/Cindy Aguilera_357606566_3731939663734231_6775179783727000133_n.jpg" alt="Cindy Aguilera">
+            <div class="nombre">Cindy Aguilera [21/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cindy soto" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Cindy Soto_122033733_3557766147600248_2222343054381908013_n.jpg" alt="Cindy Soto">
+            <div class="nombre">Cindy Soto [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cinthia ortega" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Cinthia Ortega_242332667_275228254417590_3039976112756603021_n.jpg" alt="Cinthia Ortega">
+            <div class="nombre">Cinthia Ortega [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="clarisa arellano" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Clarisa Arellano_received_1129144954191384.jpeg" alt="Clarisa Arellano">
+            <div class="nombre">Clarisa Arellano [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="claudea enc avila" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Claudea Enc Avila_26692972_1582318628521435_1041227302_o.jpg" alt="Claudea Enc Avila">
+            <div class="nombre">Claudea Enc Avila [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="claudia paniagua" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Claudia Paniagua_84583567_853014701815259_7336525193562554368_n.jpg" alt="Claudia Paniagua">
+            <div class="nombre">Claudia Paniagua [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cristina fabiola zavala cardozo" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Cristina Fabiola Zavala Cardozo_received_1349819491892251.jpeg" alt="Cristina Fabiola Zavala Cardozo">
+            <div class="nombre">Cristina Fabiola Zavala Cardozo [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="dammaris s rodriguez buenrostro" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Dammaris S Rodriguez Buenrostro_PERFIL.jpg" alt="Dammaris S Rodriguez Buenrostro">
+            <div class="nombre">Dammaris S Rodriguez Buenrostro [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="daniela montes" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Daniela Montes_received_1181185948947243.jpeg" alt="Daniela Montes">
+            <div class="nombre">Daniela Montes [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="daniela rodriguez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Daniela Rodriguez_100581762_1137884666571845_3384666389410217984_n.jpg" alt="Daniela Rodriguez">
+            <div class="nombre">Daniela Rodriguez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="davcris zednem" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Davcris Zednem_128892280_180223023458586_4081383507962531680_n.jpg" alt="Davcris Zednem">
+            <div class="nombre">Davcris Zednem [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="de renteria osorio elizabeth" data-fecha="04/06/2024">
+            <img src="rostros_detectados/De Renteria Osorio Elizabeth_104267220_190057009003907_6667782315065045821_n.jpg" alt="De Renteria Osorio Elizabeth">
+            <div class="nombre">De Renteria Osorio Elizabeth [04/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="delen berenice orozco salazar" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Delen Berenice Orozco Salazar_5216862892730_status_9948d51c29e14f59be39df6d74990734.jpg" alt="Delen Berenice Orozco Salazar">
+            <div class="nombre">Delen Berenice Orozco Salazar [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="destiny gastelum" data-fecha="04/06/2024">
+            <img src="rostros_detectados/Destiny Gastelum_361423362_662689682419639_3013229868742285924_n.jpg" alt="Destiny Gastelum">
+            <div class="nombre">Destiny Gastelum [04/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="dominguez vianey" data-fecha="21/04/2024">
+            <img src="rostros_detectados/Dominguez Vianey_34266582_1706124162808041_7426052159055069184_n.jpg" alt="Dominguez Vianey">
+            <div class="nombre">Dominguez Vianey [21/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="dulce lucero" data-fecha="02/04/2024">
+            <img src="rostros_detectados/Dulce Lucero_327870172_863444604731750_964898444518759219_n.jpg" alt="Dulce Lucero">
+            <div class="nombre">Dulce Lucero [02/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="eimi cortez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Eimi Cortez_259036994_522222182490784_6951113076689014806_n.jpg" alt="Eimi Cortez">
+            <div class="nombre">Eimi Cortez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="eliza sanchez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Eliza Sanchez_353100630_3622228007999932_5291716187182320669_n.jpg" alt="Eliza Sanchez">
+            <div class="nombre">Eliza Sanchez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="elizza valenzuela" data-fecha="05/07/2024">
+            <img src="rostros_detectados/Elizza Valenzuela_364214193_668368031507669_3886235628127804573_n.jpg" alt="Elizza Valenzuela">
+            <div class="nombre">Elizza Valenzuela [05/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ene bel" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ene Bel_12528150_1722668187947057_303909663_n.jpg" alt="Ene Bel">
+            <div class="nombre">Ene Bel [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ericka denisse" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Ericka Denisse_photo_2023-05-27_16-13-15.jpg" alt="Ericka Denisse">
+            <div class="nombre">Ericka Denisse [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="esmeralda cruz vera" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Esmeralda Cruz Vera_107826349_577169412971838_6210930807651346622_n.jpg" alt="Esmeralda Cruz Vera">
+            <div class="nombre">Esmeralda Cruz Vera [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="esmeralda magos" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Esmeralda Magos_0b659046-56fc-42c9-9104-a0b5856d4310.jpg" alt="Esmeralda Magos">
+            <div class="nombre">Esmeralda Magos [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="esther betanzos dominguez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Esther Betanzos Dominguez_video-1534491913.mp4_frame30.jpg" alt="Esther Betanzos Dominguez">
+            <div class="nombre">Esther Betanzos Dominguez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="eva diaz" data-fecha="13/07/2024">
+            <img src="rostros_detectados/Eva Diaz_118406817_1672382999596364_265363489788025185_n.jpg" alt="Eva Diaz">
+            <div class="nombre">Eva Diaz [13/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="evelyn gutierrez" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Evelyn Gutierrez_IMG_20240201_111254_057.jpg" alt="Evelyn Gutierrez">
+            <div class="nombre">Evelyn Gutierrez [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="evelyn s ramos" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Evelyn S Ramos_IMG-20201223-WA0027.jpg" alt="Evelyn S Ramos">
+            <div class="nombre">Evelyn S Ramos [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="evelyn talamantes" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Evelyn Talamantes_101693673_531869717695335_7076163713438318592_n.jpg" alt="Evelyn Talamantes">
+            <div class="nombre">Evelyn Talamantes [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="faby hermosillo" data-fecha="04/06/2024">
+            <img src="rostros_detectados/Faby Hermosillo_31123920_1914448691920835_6941092420817780736_n.jpg" alt="Faby Hermosillo">
+            <div class="nombre">Faby Hermosillo [04/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fanny montoya" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Fanny Montoya_14383338_529446487246023_1821152382_n.jpg" alt="Fanny Montoya">
+            <div class="nombre">Fanny Montoya [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fatima bolaños" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Fatima Bolanos_184880736_288383466167840_8397441321587869197_n.jpg" alt="Fatima Bolaños">
+            <div class="nombre">Fatima Bolaños [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fernanda jaqueline" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Fernanda Jaqueline_55857740_789805851390983_3116572499274366976_n.jpg" alt="Fernanda Jaqueline">
+            <div class="nombre">Fernanda Jaqueline [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="flor azucena silva" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Flor Azucena Silva_362981246_6543568242376490_5824023000539601382_n.jpg" alt="Flor Azucena Silva">
+            <div class="nombre">Flor Azucena Silva [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="flores angelica" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Flores Angelica_13472375_1189440274433708_354530070_n.jpg" alt="Flores Angelica">
+            <div class="nombre">Flores Angelica [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="gabii l gaeta" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Gabii L Gaeta_286593210_593475235790039_6592864440463811963_n.jpg" alt="Gabii L Gaeta">
+            <div class="nombre">Gabii L Gaeta [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="gabriela soto" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Gabriela Soto_29244410_2013686418953122_1784724847549480960_n.jpg" alt="Gabriela Soto">
+            <div class="nombre">Gabriela Soto [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="garcia vargas lucia lucki" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Garcia Vargas Lucia Lucki_90470005_503605190545548_1733053045199077376_n.jpg" alt="Garcia Vargas Lucia Lucki">
+            <div class="nombre">Garcia Vargas Lucia Lucki [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="gissel mendez gm" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Gissel Mendez GM_311910752_1842419559453667_3381644435566941065_n.jpg" alt="Gissel Mendez GM">
+            <div class="nombre">Gissel Mendez GM [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="guadalupe alamilla" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Guadalupe Alamilla_279600177_1031110281134238_3442080640455579336_n.jpg" alt="Guadalupe Alamilla">
+            <div class="nombre">Guadalupe Alamilla [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="guadalupe barajas" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Guadalupe Barajas_188745681_482201116399979_3444372344370804276_n.jpg" alt="Guadalupe Barajas">
+            <div class="nombre">Guadalupe Barajas [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="guadalupe lopez oxxo" data-fecha="23/04/2024">
+            <img src="rostros_detectados/Guadalupe Lopez OXXO_101494595_885185488622941_5152963279110275072_n.jpg" alt="Guadalupe Lopez OXXO">
+            <div class="nombre">Guadalupe Lopez OXXO [23/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="hannah whibley" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Hannah Whibley_147378712_430034811649298_1729794563141556281_n.jpg" alt="Hannah Whibley">
+            <div class="nombre">Hannah Whibley [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="hisiz leboo ramirez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Hisiz Leboo Ramirez_289578832_555960102743350_8401262069265355860_n.jpg" alt="Hisiz Leboo Ramirez">
+            <div class="nombre">Hisiz Leboo Ramirez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="indira damaris quintero ceceña" data-fecha="25/07/2024">
+            <img src="rostros_detectados/Indira Damaris Quintero Cecena_14640c24-f12e-4095-b0fb-37fcdaeb501d.png" alt="Indira Damaris Quintero Ceceña">
+            <div class="nombre">Indira Damaris Quintero Ceceña [25/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ingrid aney" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Ingrid Aney_20210629_200647_Film3.jpg" alt="Ingrid Aney">
+            <div class="nombre">Ingrid Aney [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="irene mv" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Irene Mv_326949293_1903087463368217_1012682111762960080_n.jpg" alt="Irene Mv">
+            <div class="nombre">Irene Mv [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="irerhi etzaly" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Irerhi Etzaly_IMG_20230902_173817_611.jpg" alt="Irerhi Etzaly">
+            <div class="nombre">Irerhi Etzaly [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="isabel r rodríguez" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Isabel R Rodriguez_117855079_728008288047007_2734485888696987472_n.jpg" alt="Isabel R Rodríguez">
+            <div class="nombre">Isabel R Rodríguez [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="itz reyes" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Itz Reyes_193523505_189167226309708_3445246444732928362_n.jpg" alt="Itz Reyes">
+            <div class="nombre">Itz Reyes [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="itzel inzunza" data-fecha="31/07/2024">
+            <img src="rostros_detectados/Itzel Inzunza_125284178_827477808087902_1470441462523332066_n.jpg" alt="Itzel Inzunza">
+            <div class="nombre">Itzel Inzunza [31/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jackelyne guillen" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jackelyne Guillen_297748564_451145916733031_5194991852475347642_n.jpg" alt="Jackelyne Guillen">
+            <div class="nombre">Jackelyne Guillen [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jana siordia" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jana Siordia_106228623_1164900587196757_3045133780554418263_n.jpg" alt="Jana Siordia">
+            <div class="nombre">Jana Siordia [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jassel chonquit castro" data-fecha="31/01/2025">
+            <img src="rostros_detectados/Jassel Chonquit Castro_163427266_4174375449262573_6561253029758802493_n.jpg" alt="Jassel Chonquit Castro">
+            <div class="nombre">Jassel Chonquit Castro [31/01/2025]</div>
+        </div>
+
+        <div class="persona" data-nombre="jazmin de jesus" data-fecha="30/07/2024">
+            <img src="rostros_detectados/Jazmin De Jesus_159642308_279208906937786_8991257314360593592_n.jpg" alt="Jazmin De Jesus">
+            <div class="nombre">Jazmin De Jesus [30/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jc avelino" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jc Avelino_147014111_450026706034285_29408049857218120_n.jpg" alt="Jc Avelino">
+            <div class="nombre">Jc Avelino [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jenifer vargas" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jenifer Vargas_received_1179196268931124.jpeg" alt="Jenifer Vargas">
+            <div class="nombre">Jenifer Vargas [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jessica carrillo" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jessica Carrillo_160779073_2850342825224450_4602282760052719245_n.jpg" alt="Jessica Carrillo">
+            <div class="nombre">Jessica Carrillo [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jessica ramirez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Jessica Ramirez_47233959_304561393489503_4288250615689117696_n.jpg" alt="Jessica Ramirez">
+            <div class="nombre">Jessica Ramirez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="jocelyn alvarado" data-fecha="20/06/2024">
+            <img src="rostros_detectados/Jocelyn Alvarado_361074609_3428720304110136_4112190771795581885_n.jpg" alt="Jocelyn Alvarado">
+            <div class="nombre">Jocelyn Alvarado [20/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="joselin cardiel haro" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Joselin Cardiel Haro_21618182_1449228158493556_1179118540_o.jpg" alt="Joselin Cardiel Haro">
+            <div class="nombre">Joselin Cardiel Haro [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="joselyn garcia" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Joselyn Garcia_259528836_962732341026860_7646870158160620936_n.jpg" alt="Joselyn Garcia">
+            <div class="nombre">Joselyn Garcia [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="joss castillo beltran" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Joss Castillo Beltran_photo_2022-05-31_08-35-08.jpg" alt="Joss Castillo Beltran">
+            <div class="nombre">Joss Castillo Beltran [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="kareli acosta moreno" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Kareli Acosta Moreno_867551cb-fd33-4a6e-ab7b-b85b76e08bfb.jpeg" alt="Kareli Acosta Moreno">
+            <div class="nombre">Kareli Acosta Moreno [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karely escobar" data-fecha="18/06/2024">
+            <img src="rostros_detectados/Karely Escobar_363522156_268188312376921_9157339752666911035_n.jpg" alt="Karely Escobar">
+            <div class="nombre">Karely Escobar [18/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen beifong" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karen Beifong_126134191_368299067786592_4044386040906254842_n_368299064453259.jpg" alt="Karen Beifong">
+            <div class="nombre">Karen Beifong [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen delval" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karen DelVal_102760735_1401405190068453_7789508935084761052_n.jpg" alt="Karen DelVal">
+            <div class="nombre">Karen DelVal [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen judith alcaraz osuna" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Karen Judith Alcaraz Osuna_083aee70-eeca-46af-a6f4-9c0a0d66b81c.jpg" alt="Karen Judith Alcaraz Osuna">
+            <div class="nombre">Karen Judith Alcaraz Osuna [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen lzg" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karen Lzg_video-1638393466.mp4_frame210.jpg" alt="Karen Lzg">
+            <div class="nombre">Karen Lzg [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen padilla" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karen Padilla_122869232_3422749184508532_4617653079293127535_n.jpg" alt="Karen Padilla">
+            <div class="nombre">Karen Padilla [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karen reyes" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karen Reyes_121385329_697843877490731_6927677688756111927_n.jpg" alt="Karen Reyes">
+            <div class="nombre">Karen Reyes [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karla berenisse escarrega lopez" data-fecha="20/04/2024">
+            <img src="rostros_detectados/Karla Berenisse Escarrega Lopez_357025558_809734927376714_5179734752077430533_n.jpg" alt="Karla Berenisse Escarrega Lopez">
+            <div class="nombre">Karla Berenisse Escarrega Lopez [20/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karla lizette" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Karla Lizette_267791004_275515331136193_2238192322158176426_n.jpg" alt="Karla Lizette">
+            <div class="nombre">Karla Lizette [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karla m. v. cortez" data-fecha="14/03/2025">
+            <img src="rostros_detectados/Karla M. V. Cortez_17887681_1286557271431443_94494933_o_1286557271431443.jpg" alt="Karla M. V. Cortez">
+            <div class="nombre">Karla M. V. Cortez [14/03/2025]</div>
+        </div>
+
+        <div class="persona" data-nombre="kendra villanueva" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Kendra Villanueva_318039103_865564737825307_8718022012969138082_n.jpg" alt="Kendra Villanueva">
+            <div class="nombre">Kendra Villanueva [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="kenya luna rodriguez" data-fecha="30/04/2024">
+            <img src="rostros_detectados/Kenya Luna Rodriguez_307565857_841437867030147_9081352768486448417_n.jpg" alt="Kenya Luna Rodriguez">
+            <div class="nombre">Kenya Luna Rodriguez [30/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="km robles" data-fecha="03/04/2024">
+            <img src="rostros_detectados/KM Robles_183534315_197536142052030_6966486110465203032_n.png" alt="KM Robles">
+            <div class="nombre">KM Robles [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="krystyna castillo" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Krystyna Castillo_video-1633907616.mp4_frame570.jpg" alt="Krystyna Castillo">
+            <div class="nombre">Krystyna Castillo [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="kyoko okade" data-fecha="15/05/2024">
+            <img src="rostros_detectados/Kyoko Okade_IMG_20240505_034858_535.jpg" alt="Kyoko Okade">
+            <div class="nombre">Kyoko Okade [15/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="larissa custodio" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Larissa Custodio_received_1034203277086167.jpeg" alt="Larissa Custodio">
+            <div class="nombre">Larissa Custodio [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="layza carolina" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Layza Carolina_384489436_586516486857696_6353908799043069830_n.jpg" alt="Layza Carolina">
+            <div class="nombre">Layza Carolina [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="leonela custodio hernandez" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Leonela Custodio Hernandez_0c7a80da-dfc7-4efe-a191-6bbc89762e03.png" alt="Leonela Custodio Hernandez">
+            <div class="nombre">Leonela Custodio Hernandez [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="leslie arce" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Leslie Arce_photo_2022-05-23_12-30-25.jpg" alt="Leslie Arce">
+            <div class="nombre">Leslie Arce [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="leslie deniss" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Leslie Deniss_301674409_760770498313264_7213251546427868343_n.jpg" alt="Leslie Deniss">
+            <div class="nombre">Leslie Deniss [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lety mata" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Lety Mata_300781933_477593613901494_4239377410082666998_n.jpg" alt="Lety Mata">
+            <div class="nombre">Lety Mata [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lili martinez" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Lili Martinez_167274305_329938428657664_8050657201852949978_n.jpg" alt="Lili Martinez">
+            <div class="nombre">Lili Martinez [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="liliana romero" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Liliana Romero_278338782_380684157288598_5858171936944754779_n.jpg" alt="Liliana Romero">
+            <div class="nombre">Liliana Romero [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="liliana vzcn" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Liliana VzCn_242375025_605412750644655_745475359512160555_n.jpg" alt="Liliana VzCn">
+            <div class="nombre">Liliana VzCn [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lisset zamora" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Lisset Zamora_300596920_1356019408138728_5744649168568759432_n.jpg" alt="Lisset Zamora">
+            <div class="nombre">Lisset Zamora [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="litzy verduzco" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Litzy Verduzco_122678085_347368606526592_7103599335821038367_n.jpg" alt="Litzy Verduzco">
+            <div class="nombre">Litzy Verduzco [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lizeth cota" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Lizeth Cota_278269534_996687097887116_8484791599686693529_n.jpg" alt="Lizeth Cota">
+            <div class="nombre">Lizeth Cota [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lourdes cadena" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Lourdes Cadena_12962416_10154155922299575_556513808_o.jpg" alt="Lourdes Cadena">
+            <div class="nombre">Lourdes Cadena [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lucero rojo" data-fecha="01/05/2024">
+            <img src="rostros_detectados/Lucero Rojo_370072491_297098856531231_4040761086214243322_n.jpg" alt="Lucero Rojo">
+            <div class="nombre">Lucero Rojo [01/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="luisa king" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Luisa King_12769472_1025256350864552_1546254442_n.jpg" alt="Luisa King">
+            <div class="nombre">Luisa King [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="magdiel godoy" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Magdiel Godoy_105455571_995273584263250_3174355220585738336_n.jpg" alt="Magdiel Godoy">
+            <div class="nombre">Magdiel Godoy [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maggie wilson (giselle tw)" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Maggie Wilson _Giselle Tw__2b699e21-2afe-41f6-aa7b-885472e68fb5.jpg" alt="Maggie Wilson (Giselle Tw)">
+            <div class="nombre">Maggie Wilson (Giselle Tw) [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="manrriquez fernanda" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Manrriquez Fernanda_26553066_1822708101104352_15859677_n.jpg" alt="Manrriquez Fernanda">
+            <div class="nombre">Manrriquez Fernanda [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="mara araiza" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Mara Araiza_19402334_793585547457735_298558859_o.jpg" alt="Mara Araiza">
+            <div class="nombre">Mara Araiza [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="margarita ibarra palafox" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Margarita Ibarra Palafox_46761016_622153801534631_5022404369325228032_n.jpg" alt="Margarita Ibarra Palafox">
+            <div class="nombre">Margarita Ibarra Palafox [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maria barbosa" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Maria Barbosa_65738254_1308581012631120_4172959618856648704_n.jpg" alt="Maria Barbosa">
+            <div class="nombre">Maria Barbosa [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maria esther gaxiola" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Maria Esther Gaxiola_101197914_255089569171133_1552972423756775424_n.jpg" alt="Maria Esther Gaxiola">
+            <div class="nombre">Maria Esther Gaxiola [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maria fernanda lugo mandujano" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Maria Fernanda Lugo Mandujano_51357617_2261201587498966_7544301589490565120_n.jpg" alt="Maria Fernanda Lugo Mandujano">
+            <div class="nombre">Maria Fernanda Lugo Mandujano [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maria magdalena hernández garcía" data-fecha="18/06/2024">
+            <img src="rostros_detectados/Maria Magdalena Hernandez Garcia_313099308_1144693299508469_7583695899942452933_n.jpg" alt="Maria Magdalena Hernández García">
+            <div class="nombre">Maria Magdalena Hernández García [18/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maria zavala" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Maria Zavala_67610793_681794242299614_3065102938343997440_n.jpg" alt="Maria Zavala">
+            <div class="nombre">Maria Zavala [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="mariahana hernandez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Mariahana Hernandez_44434929_498857560595844_8827509488207527936_n.jpg" alt="Mariahana Hernandez">
+            <div class="nombre">Mariahana Hernandez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="mariana c silva" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Mariana C Silva_21845720_1451801314901368_424906785_o.jpg" alt="Mariana C Silva">
+            <div class="nombre">Mariana C Silva [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="marina alaniz" data-fecha="17/04/2024">
+            <img src="rostros_detectados/Marina Alaniz_20465007_10155411088376542_217081592_o.jpg" alt="Marina Alaniz">
+            <div class="nombre">Marina Alaniz [17/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="marina ruiz" data-fecha="21/04/2024">
+            <img src="rostros_detectados/Marina Ruiz_46733045_211489443081143_1269181282852536320_n.jpg" alt="Marina Ruiz">
+            <div class="nombre">Marina Ruiz [21/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="marisol rodriguez" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Marisol Rodriguez_photo_2022-05-11_10-54-21.jpg" alt="Marisol Rodriguez">
+            <div class="nombre">Marisol Rodriguez [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="martha morton" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Martha Morton_video-1649126762.mp4_frame270.jpg" alt="Martha Morton">
+            <div class="nombre">Martha Morton [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="maura ochoa" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Maura Ochoa_45560765_535074833571148_4465779446737010688_n.jpg" alt="Maura Ochoa">
+            <div class="nombre">Maura Ochoa [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="melissa herrera" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Melissa Herrera_144581050_337257524109329_1697348841446591001_n.jpg" alt="Melissa Herrera">
+            <div class="nombre">Melissa Herrera [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="michel af" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Michel AF_video-1636278099.mp4_frame0.jpg" alt="Michel AF">
+            <div class="nombre">Michel AF [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="michelle mud romero" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Michelle Mud Romero_20273221_1511025198980622_1349469217_o_1511025198980622.jpg" alt="Michelle Mud Romero">
+            <div class="nombre">Michelle Mud Romero [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="milhy alvarez" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Milhy Alvarez_380742180_3011989875659253_875544686905247836_n.jpg" alt="Milhy Alvarez">
+            <div class="nombre">Milhy Alvarez [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="miranda mendoza" data-fecha="25/07/2024">
+            <img src="rostros_detectados/Miranda Mendoza_photo_13_2024-07-25_09-01-51.jpg" alt="Miranda Mendoza">
+            <div class="nombre">Miranda Mendoza [25/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="miriam m. herrera" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Miriam M. Herrera_291479199_1407961529609339_1308076346388317976_n.jpg" alt="Miriam M. Herrera">
+            <div class="nombre">Miriam M. Herrera [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nallely martinez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nallely Martinez_173123900_166193542029215_3436586623607357344_n.jpg" alt="Nallely Martinez">
+            <div class="nombre">Nallely Martinez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nancy muñiz verde" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nancy Muniz Verde_31949544_1910128595725521_4953389025177108480_n.jpg" alt="Nancy Muñiz Verde">
+            <div class="nombre">Nancy Muñiz Verde [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nancy noriega" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nancy Noriega_148887492_2449456508532877_3309869127548785028_n.jpg" alt="Nancy Noriega">
+            <div class="nombre">Nancy Noriega [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="natalia yañez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Natalia Yanez_222693024_555200272596744_6993113353890056482_n.jpg" alt="Natalia Yañez">
+            <div class="nombre">Natalia Yañez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nath leyva" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nath Leyva_274775613_1008585433079157_9118044645170134821_n.jpg" alt="Nath Leyva">
+            <div class="nombre">Nath Leyva [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nicole zavala" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nicole Zavala_242537029_387268892787292_1749845790830385004_n.jpg" alt="Nicole Zavala">
+            <div class="nombre">Nicole Zavala [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nohemi lopez gonzalez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nohemi Lopez Gonzalez_13633365_1562732317364245_1441801097_o.jpg" alt="Nohemi Lopez Gonzalez">
+            <div class="nombre">Nohemi Lopez Gonzalez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nohemi pc" data-fecha="25/04/2024">
+            <img src="rostros_detectados/Nohemi PC_photo1714375790.jpeg" alt="Nohemi PC">
+            <div class="nombre">Nohemi PC [25/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="norma victoria paredes" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Norma Victoria Paredes_72836245_760361321082889_603499461217353728_n.jpg" alt="Norma Victoria Paredes">
+            <div class="nombre">Norma Victoria Paredes [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="pamela arellano" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Pamela Arellano_cfabec07-257e-4125-bd53-1b03296303a2.jpg" alt="Pamela Arellano">
+            <div class="nombre">Pamela Arellano [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="patricia saucedo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Patricia Saucedo_PERFIL _1_.JPG" alt="Patricia Saucedo">
+            <div class="nombre">Patricia Saucedo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="perla constante" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Perla Constante_IMG_20201107_185832_756.jpg" alt="Perla Constante">
+            <div class="nombre">Perla Constante [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="ponce hurtado myrna" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Ponce Hurtado Myrna_received_1079018546142659.jpeg" alt="Ponce Hurtado Myrna">
+            <div class="nombre">Ponce Hurtado Myrna [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="priiscila gaytan" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Priiscila Gaytan_20930652_1454034874684161_73955181_o.jpg" alt="Priiscila Gaytan">
+            <div class="nombre">Priiscila Gaytan [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="princess de anda" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Princess De Anda_video-1626166540.mp4_frame150.jpg" alt="Princess De Anda">
+            <div class="nombre">Princess De Anda [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="priscila alvarado" data-fecha="27/05/2024">
+            <img src="rostros_detectados/Priscila Alvarado_483763ad-7470-435a-a5aa-092a5dc479c7.jpg" alt="Priscila Alvarado">
+            <div class="nombre">Priscila Alvarado [27/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="qv fer" data-fecha="24/06/2024">
+            <img src="rostros_detectados/Qv Fer_348902326_1281038499511366_1741158404505608250_n.jpg" alt="Qv Fer">
+            <div class="nombre">Qv Fer [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="rosa maria peñuñuri alonzo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Rosa Maria Penunuri Alonzo_29793184_584158028618563_1353431782237667328_n _1_.jpg" alt="Rosa Maria Peñuñuri Alonzo">
+            <div class="nombre">Rosa Maria Peñuñuri Alonzo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="rosa santillan flores" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Rosa Santillan Flores_230364487_547636273148943_4140416201777644344_n.jpg" alt="Rosa Santillan Flores">
+            <div class="nombre">Rosa Santillan Flores [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="rv miriam" data-fecha="24/06/2024">
+            <img src="rostros_detectados/RV Miriam_173968544_295552778619277_5878019440918723747_n.jpg" alt="RV Miriam">
+            <div class="nombre">RV Miriam [24/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sahira villarreal" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Sahira Villarreal_received_2316037625363145.mp4_frame0.jpg" alt="Sahira Villarreal">
+            <div class="nombre">Sahira Villarreal [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sam valenzuela" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Sam Valenzuela_20191221_161148.jpg" alt="Sam Valenzuela">
+            <div class="nombre">Sam Valenzuela [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sara heredia" data-fecha="02/04/2024">
+            <img src="rostros_detectados/Sara Heredia_316659157_1351452482272056_6319550239535323011_n.jpg" alt="Sara Heredia">
+            <div class="nombre">Sara Heredia [02/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sarahi soto" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Sarahi Soto_129796511_384143356197430_5711226092865268233_n.jpg" alt="Sarahi Soto">
+            <div class="nombre">Sarahi Soto [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="selene karen" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Selene Karen_273744726_248423960834690_3910725186552444658_n.jpg" alt="Selene Karen">
+            <div class="nombre">Selene Karen [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="selina ortega" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Selina Ortega_IMG_20210310_143555_074.jpg" alt="Selina Ortega">
+            <div class="nombre">Selina Ortega [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sheyla hq" data-fecha="21/04/2024">
+            <img src="rostros_detectados/Sheyla HQ_363455641_3436133346601877_1809476792584407579_n.jpg" alt="Sheyla HQ">
+            <div class="nombre">Sheyla HQ [21/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sheyla huereque" data-fecha="03/04/2024">
+            <img src="rostros_detectados/Sheyla Huereque_178662588_908793916361892_7574576487962818689_n.jpg" alt="Sheyla Huereque">
+            <div class="nombre">Sheyla Huereque [03/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="shezzid murillo" data-fecha="23/05/2024">
+            <img src="rostros_detectados/Shezzid Murillo_IMG_20230708_155519_449.jpg" alt="Shezzid Murillo">
+            <div class="nombre">Shezzid Murillo [23/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sintia leal" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Sintia Leal_17198334_819755281511128_1822347723_n.jpg" alt="Sintia Leal">
+            <div class="nombre">Sintia Leal [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="adriana tapia" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Adriana Tapia_received_170184591668416.jpeg" alt="Adriana Tapia">
+            <div class="nombre">Adriana Tapia [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="airam hernández" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Airam Hernandez_-4972194819111758895_121.jpg" alt="Airam Hernández">
+            <div class="nombre">Airam Hernández [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="andrea cervantes" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Andrea Cervantes_IMG_20230912_162457_523.jpg" alt="Andrea Cervantes">
+            <div class="nombre">Andrea Cervantes [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="andrea gonzalez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Andrea Gonzalez_25114858_1547165282019233_2146672224_n_1547165282019233.jpg" alt="Andrea Gonzalez">
+            <div class="nombre">Andrea Gonzalez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="normales" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Normales_20216603_1782733638687585_558901019_o_1782733638687585.jpg" alt="Normales">
+            <div class="nombre">Normales [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="andrea soto" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Andrea Soto_DSC_0605.jpg" alt="Andrea Soto">
+            <div class="nombre">Andrea Soto [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="angélica landa" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Angelica Landa_108575302_2356662701305053_4628644171615757831_n.jpg" alt="Angélica Landa">
+            <div class="nombre">Angélica Landa [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anna hernadez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Anna Hernadez_photo_2022-02-18_15-16-58.jpg" alt="Anna Hernadez">
+            <div class="nombre">Anna Hernadez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="annet gonzalez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Annet Gonzalez_12404261_1495529497417917_966618990_n.jpg" alt="Annet Gonzalez">
+            <div class="nombre">Annet Gonzalez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="any haro" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Any Haro_received_196769021716341.jpeg" alt="Any Haro">
+            <div class="nombre">Any Haro [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="blanka reyes" data-fecha="01/05/2024">
+            <img src="rostros_detectados/Blanka Reyes_279652208_1369603543536972_4438889496827826131_n.jpg" alt="Blanka Reyes">
+            <div class="nombre">Blanka Reyes [01/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="candy hernandez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Candy Hernandez_received_1004864383318288.jpeg" alt="Candy Hernandez">
+            <div class="nombre">Candy Hernandez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cassandra cervantes" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Cassandra Cervantes_received_130718390768524.jpeg" alt="Cassandra Cervantes">
+            <div class="nombre">Cassandra Cervantes [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="cithlalye lemuss" data-fecha="22/05/2024">
+            <img src="rostros_detectados/Cithlalye Lemuss_11014977_920866514644584_4383539754867714990_n.jpg" alt="Cithlalye Lemuss">
+            <div class="nombre">Cithlalye Lemuss [22/05/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="delia urrea" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Delia Urrea_IMG_20230912_220142_114.jpg" alt="Delia Urrea">
+            <div class="nombre">Delia Urrea [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="diana rincon" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Diana Rincon_IMG_20200409_081820_700.jpg" alt="Diana Rincon">
+            <div class="nombre">Diana Rincon [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="erika mendoza" data-fecha="09/06/2024">
+            <img src="rostros_detectados/Erika Mendoza_IMG_20240708_172108_682.jpg" alt="Erika Mendoza">
+            <div class="nombre">Erika Mendoza [09/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="esmeralda gallardo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Esmeralda Gallardo_WhatsApp Image 2023-09-27 at 10.31.32 PM.jpeg" alt="Esmeralda Gallardo">
+            <div class="nombre">Esmeralda Gallardo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="estefanny cortez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Estefanny Cortez_IMG_20231010_070642_765.jpg" alt="Estefanny Cortez">
+            <div class="nombre">Estefanny Cortez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="esther coronado" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Esther Coronado_FB_IMG_1565689358724.jpg" alt="Esther Coronado">
+            <div class="nombre">Esther Coronado [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fernanda agramont" data-fecha="18/06/2024">
+            <img src="rostros_detectados/Fernanda Agramont_-5152336923010903629_121.jpg" alt="Fernanda Agramont">
+            <div class="nombre">Fernanda Agramont [18/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fernanda gaxiola" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Fernanda Gaxiola_203606519_3007220646156155_4782533416051800148_n.jpg" alt="Fernanda Gaxiola">
+            <div class="nombre">Fernanda Gaxiola [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fernanda ramos" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Fernanda Ramos_received_1071898346224013.jpeg" alt="Fernanda Ramos">
+            <div class="nombre">Fernanda Ramos [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="fernanda verduzco" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Fernanda Verduzco_-4904724331750337261_121.jpg" alt="Fernanda Verduzco">
+            <div class="nombre">Fernanda Verduzco [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="gissel duarte" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Gissel Duarte_IMG_20230327_164351_003.jpg" alt="Gissel Duarte">
+            <div class="nombre">Gissel Duarte [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="gisselle alvarado" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Gisselle Alvarado_received_1290225954452846.jpeg" alt="Gisselle Alvarado">
+            <div class="nombre">Gisselle Alvarado [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="itzel andrea esquivel" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Itzel Andrea Esquivel_2019-06-02-15-25-58-697.jpg" alt="Itzel Andrea Esquivel">
+            <div class="nombre">Itzel Andrea Esquivel [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="itzel ibarra" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Itzel Ibarra_photo5071278215686891860.jpg" alt="Itzel Ibarra">
+            <div class="nombre">Itzel Ibarra [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="izett hernandez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Izett Hernandez_FB_IMG_1580239492527.jpg" alt="Izett Hernandez">
+            <div class="nombre">Izett Hernandez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karely montoya" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Karely Montoya_363dcd4a-4663-4894-b7c9-b119adc77a6a.mp4_frame0.jpg" alt="Karely Montoya">
+            <div class="nombre">Karely Montoya [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karina vargas" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Karina Vargas_photo_2022-02-18_17-38-03.jpg" alt="Karina Vargas">
+            <div class="nombre">Karina Vargas [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="karla viktoria" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Karla Viktoria_57101508_428823384545573_569076311952195584_n.jpg" alt="Karla Viktoria">
+            <div class="nombre">Karla Viktoria [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="kennya vazquez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Kennya Vazquez_20210619_175645.jpg" alt="Kennya Vazquez">
+            <div class="nombre">Kennya Vazquez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="kiabeth palomares" data-fecha="23/06/2024">
+            <img src="rostros_detectados/Kiabeth Palomares_290437744_524162766122784_7926528785108260_n.jpg" alt="Kiabeth Palomares">
+            <div class="nombre">Kiabeth Palomares [23/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lesli barrera" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Lesli Barrera_47291606_914440482278972_2502403037918658560_n.jpg" alt="Lesli Barrera">
+            <div class="nombre">Lesli Barrera [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="leslie mñz" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Leslie Mnz_277189242_732021744917283_8452180130254146683_n.jpg" alt="Leslie Mñz">
+            <div class="nombre">Leslie Mñz [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="leticia gonzalez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Leticia Gonzalez_IMG_20230912_163602_342.jpg" alt="Leticia Gonzalez">
+            <div class="nombre">Leticia Gonzalez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="liz murillo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Liz Murillo_53142713_246063546277081_2840873351633698816_n.jpg" alt="Liz Murillo">
+            <div class="nombre">Liz Murillo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="lorena chavez lore" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Lorena Chavez Lore_20210901_042530-COLLAGE.jpg" alt="Lorena Chavez Lore">
+            <div class="nombre">Lorena Chavez Lore [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="luisa valdivia" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Luisa Valdivia_231d750f-81ab-4298-a863-6c12bfd9a0f8.jpg" alt="Luisa Valdivia">
+            <div class="nombre">Luisa Valdivia [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="magdalena tamayo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Magdalena Tamayo_a5e45785-f8d2-45bd-956d-84e6542a69be.png" alt="Magdalena Tamayo">
+            <div class="nombre">Magdalena Tamayo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="martha alicia rubio" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Martha Alicia Rubio_IMG_20190723_162422.jpg" alt="Martha Alicia Rubio">
+            <div class="nombre">Martha Alicia Rubio [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="martha arredondo" data-fecha="09/06/2024">
+            <img src="rostros_detectados/Martha Arredondo_IMG_20240609_084856_615.jpg" alt="Martha Arredondo">
+            <div class="nombre">Martha Arredondo [09/06/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="medina magda" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Medina Magda_30070451_1466273846829252_466034694_o.jpg" alt="Medina Magda">
+            <div class="nombre">Medina Magda [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="melissa dimas" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Melissa Dimas_2020-07-01-20-25-18-206.jpg" alt="Melissa Dimas">
+            <div class="nombre">Melissa Dimas [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="milly ortiz v" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Milly Ortiz V_VID_20210619_180138.mp4_frame120.jpg" alt="Milly Ortiz V">
+            <div class="nombre">Milly Ortiz V [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nallely poblano galvan" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nallely Poblano Galvan_2023-05-11_1683856750004.png" alt="Nallely Poblano Galvan">
+            <div class="nombre">Nallely Poblano Galvan [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="nallely quevedo" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Nallely Quevedo_4c3e53c7-d5e7-4cfe-bee5-6aa5d6f477f1.jpg" alt="Nallely Quevedo">
+            <div class="nombre">Nallely Quevedo [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="paola esquer" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Paola Esquer_20190528_214033.jpg" alt="Paola Esquer">
+            <div class="nombre">Paola Esquer [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="pouletth anduaga" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Pouletth Anduaga_37694191_1923055601085847_3561175676826419200_n.jpg" alt="Pouletth Anduaga">
+            <div class="nombre">Pouletth Anduaga [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="pupe ramirez zavala" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Pupe Ramirez Zavala_IMG_20200830_195658_421.jpg" alt="Pupe Ramirez Zavala">
+            <div class="nombre">Pupe Ramirez Zavala [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="rosa sanchez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Rosa Sanchez_67585171_772470503227777_4255329111544692736_n.jpg" alt="Rosa Sanchez">
+            <div class="nombre">Rosa Sanchez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="tatiana ramirez arce" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Tatiana Ramirez Arce_551de1de-c16b-4684-b545-c8cd5e1a3f7e.jpg" alt="Tatiana Ramirez Arce">
+            <div class="nombre">Tatiana Ramirez Arce [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="titha grey" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Titha Grey_b12100d2-b1da-4e6b-8aab-c8310c9d4368.jpg" alt="Titha Grey">
+            <div class="nombre">Titha Grey [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="valeria espinoza inzunza" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Valeria Espinoza Inzunza_IMG_20230528_162512_863.jpg" alt="Valeria Espinoza Inzunza">
+            <div class="nombre">Valeria Espinoza Inzunza [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anonima skyworks" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Anonima SKYWORKS_received_2735733026648715.jpeg" alt="Anonima SKYWORKS">
+            <div class="nombre">Anonima SKYWORKS [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="anonima skyworks (2)" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Anonima SKYWORKS _2__received_941290306294716.jpeg" alt="Anonima SKYWORKS (2)">
+            <div class="nombre">Anonima SKYWORKS (2) [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="vereenice hrndz" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Vereenice Hrndz_IMG_20230519_082027_821.jpg" alt="Vereenice Hrndz">
+            <div class="nombre">Vereenice Hrndz [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yaneira ayon" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yaneira Ayon_135774267_496886691283253_5876006997862921837_n.jpg" alt="Yaneira Ayon">
+            <div class="nombre">Yaneira Ayon [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yese duarte" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yese Duarte_IMG-lhohm52h.jpg" alt="Yese Duarte">
+            <div class="nombre">Yese Duarte [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yessica monique bastidas campos" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yessica Monique Bastidas Campos_0553C554-E74F-4BB9-BA30-EC584B57430E.jpg" alt="Yessica Monique Bastidas Campos">
+            <div class="nombre">Yessica Monique Bastidas Campos [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="stephany escalona" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Stephany Escalona_26856758_380826915721191_1603499786_n.jpg" alt="Stephany Escalona">
+            <div class="nombre">Stephany Escalona [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="sugey garcia" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Sugey Garcia_302343947_629552248541505_3893275760557339965_n.jpg" alt="Sugey Garcia">
+            <div class="nombre">Sugey Garcia [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="susana fernandez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Susana Fernandez_84071023_198872487968875_6093211725639712768_n.jpg" alt="Susana Fernandez">
+            <div class="nombre">Susana Fernandez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="swan naomi" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Swan Naomi_280045463_5070043696446760_3990405587761090350_n.jpg" alt="Swan Naomi">
+            <div class="nombre">Swan Naomi [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="teresa fuentes ramirez" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Teresa Fuentes Ramirez_IMG20210725091456.jpg" alt="Teresa Fuentes Ramirez">
+            <div class="nombre">Teresa Fuentes Ramirez [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="valle karina" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Valle Karina_received_255861908814662.jpeg" alt="Valle Karina">
+            <div class="nombre">Valle Karina [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="vanessa muñoz" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Vanessa Munoz_327709514_234723422274599_2396113951063820275_n.jpg" alt="Vanessa Muñoz">
+            <div class="nombre">Vanessa Muñoz [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="vianney cota oz" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Vianney Cota Oz_288462642_1034958230459559_812622595896923730_n.jpg" alt="Vianney Cota Oz">
+            <div class="nombre">Vianney Cota Oz [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="villalobos giselle" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Villalobos Giselle_117342036_374764353505281_2790583015994594671_n.jpg" alt="Villalobos Giselle">
+            <div class="nombre">Villalobos Giselle [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="vivian carpena" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Vivian Carpena_10514999_691979164217233_1376889408_n.jpg" alt="Vivian Carpena">
+            <div class="nombre">Vivian Carpena [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="wendy santiago ezpinoza" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Wendy Santiago Ezpinoza_277885274_446650073927662_2272071547102892282_n.jpg" alt="Wendy Santiago Ezpinoza">
+            <div class="nombre">Wendy Santiago Ezpinoza [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yadira cota" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yadira Cota_157207603_481997659625551_8970501328750292442_n.jpg" alt="Yadira Cota">
+            <div class="nombre">Yadira Cota [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yaleslie cristina soto" data-fecha="02/04/2024">
+            <img src="rostros_detectados/Yaleslie Cristina Soto_73181901_716301302188961_1855056693663105024_n.png" alt="Yaleslie Cristina Soto">
+            <div class="nombre">Yaleslie Cristina Soto [02/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yassier lopez muñoz" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yassier Lopez Munoz_277822809_522499052805853_5007572563702834753_n.jpg" alt="Yassier Lopez Muñoz">
+            <div class="nombre">Yassier Lopez Muñoz [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yudyth robles" data-fecha="11/04/2024">
+            <img src="rostros_detectados/Yudyth Robles_136479155_402978761034880_4506023242994998585_n.jpg" alt="Yudyth Robles">
+            <div class="nombre">Yudyth Robles [11/04/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yuliana martinez" data-fecha="03/07/2024">
+            <img src="rostros_detectados/Yuliana Martinez_291758640_2236937349818166_2811593248646568398_n.jpg" alt="Yuliana Martinez">
+            <div class="nombre">Yuliana Martinez [03/07/2024]</div>
+        </div>
+
+        <div class="persona" data-nombre="yvonne p rojas" data-fecha="28/05/2024">
+            <img src="rostros_detectados/Yvonne P Rojas_32428a5a-0e96-4cce-aacc-43cd7b7d7298.jpg" alt="Yvonne P Rojas">
+            <div class="nombre">Yvonne P Rojas [28/05/2024]</div>
+        </div>
+
+    </div>
+    <script>
+        function filtrar() {
+            const input = document.getElementById("buscador").value.toLowerCase();
+            document.querySelectorAll(".persona").forEach(div => {
+                const nombre = div.dataset.nombre;
+                div.style.display = nombre.includes(input) ? "" : "none";
+            });
+        }
+        function ordenar(tipo) {
+            const cont = document.getElementById("contenedor");
+            let items = Array.from(cont.children);
+            if (tipo === "nombre") {
+                items.sort((a, b) => a.dataset.nombre.localeCompare(b.dataset.nombre));
+            } else {
+                items.sort((a, b) => new Date(b.dataset.fecha.split('/').reverse().join('/')) - new Date(a.dataset.fecha.split('/').reverse().join('/')));
+            }
+            cont.innerHTML = "";
+            items.forEach(i => cont.appendChild(i));
+        }
+    </script>
+</body>
+</html>
